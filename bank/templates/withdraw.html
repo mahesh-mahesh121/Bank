@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Withdraw</h1>
+    <form action="/withdraw" method="post">
+        <label>Account_number</label>
+        <input type="text" name="accountnumber" required>
+        <label>Pin</label>
+        <input type="text" name="pin">
+        <label>Withdraw</label>
+        <input type="text" name="withdraw" required>
+        <button type="submit" value="Submit" onclick="f()">Click</button>
+        <script>
+            function f(){
+                alert("Success!!!")
+            }
+        </script>
+    </form>
+    <a href="http://127.0.0.1:5000/login">Back</a>
+    
+</body>
+</html>

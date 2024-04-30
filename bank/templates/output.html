@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Output</h1>
+    {% if result %}
+    <table>
+        <thead>
+            <th>Account number</th>
+            <th>Pin Number</th>
+            <th>Balance</th>
+        </thead>
+        <tbody>
+            <tr>
+            <td>{{result[0]}}</td>
+            <td>{{result[1]}}</td>
+            <td>{{result[2]}}</td>
+            </tr>
+        </tbody>
+    </table>
+    {% endif %}
+
+    {% if res %}
+    <table>
+        <thead>
+            <th>withdraw</th>
+        </thead>
+        <tbody>
+            <td>{{res}}</td>
+        </tbody>
+    </table>
+    {% endif %}
+    
+    {% if amount %}
+    <table>
+        <thead>
+            <th>Deposit</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{amount}}</td>
+            </tr>
+        </tbody>
+    </table>
+    {% endif %}
+    {% if resultmin %}
+    <table>
+        <thead>
+            <th>Account Number</th>
+            <th>Withdraw</th>
+            <th>Deposit</th>
+        </thead>
+        <tbody>
+            {% for row in resultmin %}
+            <tr>
+                <td>{{row[0]}}</td>
+                <td>{{row[1]}}</td>
+                <td>{{row[2]}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% endif %}
+    <a href="http://127.0.0.1:5000/login">Back</a>
+</body>
+</html>
